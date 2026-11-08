@@ -1,0 +1,22 @@
+{
+  "primary_comparisons": [
+    "LLM_ONLY vs BASIC_RAG",
+    "BASIC_RAG vs ENHANCED_RAG"
+  ],
+  "primary_outcome": "factual_accuracy_0_1",
+  "paired_tests": {
+    "binary": "McNemar",
+    "ordinal": "Wilcoxon-Pratt"
+  },
+  "confidence_intervals": "question-level paired bootstrap, 10000 repetitions",
+  "multiple_testing": "Holm adjustment for the four pre-specified accuracy/completeness tests",
+  "claim_rates": [
+    "corpus_support",
+    "partial_support",
+    "hallucination",
+    "context_grounding",
+    "citation_correctness"
+  ],
+  "rq3": "per-RAG-system evidence-complete contingency/odds ratio and Spearman MRR-completeness association",
+  "latency": "one post-warm-up measurement per response; median and IQR across held-out questions"
+}

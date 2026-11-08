@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-08-30T08:51:25.399050+00:00",
+  "dataset_freeze_sha256": "aa584a10e12e9b2c4ef246838ae40931e03510916962dbd1224d23248f692ef0",
+  "protocol_sha256": "d8aafd4822e0686e088cdb5e8537b7610a7e4d8f958a4431de8bb366935965cb",
+  "files_in_inventory": 105,
+  "heldout_outputs": 270,
+  "heldout_generation_complete": true,
+  "locked_researcher_scoring_present": true,
+  "claim_level_evaluation_present": true,
+  "rq3_analysis_present": true
+}

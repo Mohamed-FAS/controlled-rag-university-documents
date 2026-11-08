@@ -1,0 +1,9 @@
+split,primary_category,questions
+development,confusable,5
+development,lookup,11
+development,multi-passage,6
+development,unanswerable,8
+held-out,confusable,15
+held-out,lookup,34
+held-out,multi-passage,19
+held-out,unanswerable,22

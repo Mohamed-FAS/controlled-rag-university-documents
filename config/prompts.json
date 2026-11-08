@@ -1,0 +1,5 @@
+{
+  "rag": "Answer the question using only the evidence passages below. Give a concise answer and cite the relevant document and passage identifier in square brackets after each factual statement. If the passages are insufficient, reply exactly: '{refusal}' Do not guess, use outside knowledge, or invent a source.\n\nQuestion:\n{question}\n\nEvidence passages:\n{evidence}\n\nAnswer:",
+  "llm_only": "Answer the question concisely using only information you can reliably verify from your existing model knowledge. Do not invent a source. If you cannot verify the requested UEL-specific information, state that you cannot verify the answer.\n\nQuestion:\n{question}\n\nAnswer:",
+  "refusal": "The provided university documents do not contain enough information to answer this question."
+}

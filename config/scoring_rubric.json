@@ -1,0 +1,39 @@
+{
+  "version": "UEL_RAG_SCORING_RUBRIC_V2",
+  "unit_of_analysis": "one question and one system response",
+  "factual_accuracy_0_1": {
+    "0": "The answer contains a material factual error, contradiction, unsupported answer, or does not answer the question.",
+    "1": "The answer is factually correct at the expected level and contains no material unsupported claim."
+  },
+  "completeness_0_2": {
+    "0": "Required points are absent or the response is materially wrong, contradictory, unsupported, or misleading.",
+    "1": "At least one required point is correct, but one or more required points are missing without making the response materially misleading.",
+    "2": "All required points are correctly covered at the expected level of detail."
+  },
+  "claim_labels": {
+    "fully_supported": "All material parts of the atomic factual claim are supported by the evidence being assessed.",
+    "partially_supported": "The evidence supports part of the claim, but an added condition or detail is not fully justified.",
+    "unsupported": "No assessed evidence supports the material claim.",
+    "contradicted": "The assessed evidence states something materially inconsistent with the claim.",
+    "ambiguous_not_evaluable": "The wording or evidence does not permit a reliable support judgement; exclude it from rate denominators.",
+    "non_factual": "Politeness, transition, or another statement without a checkable proposition; exclude it from rate denominators."
+  },
+  "claim_segmentation": "Split a response into the smallest independently checkable factual propositions. Keep linked conditions together when separating them would change their meaning.",
+  "corpus_rates": {
+    "corpus_support_rate": "fully corpus-supported claims / evaluable factual claims",
+    "partial_support_rate": "partially corpus-supported claims / evaluable factual claims",
+    "hallucination_rate": "(unsupported + contradicted claims) / evaluable factual claims"
+  },
+  "rag_context_rates": {
+    "context_grounding_rate": "fully retrieved-context-supported claims / context-evaluable factual claims",
+    "context_partial_support_rate": "partially retrieved-context-supported claims / context-evaluable factual claims",
+    "context_hallucination_rate": "(unsupported + contradicted by context) / context-evaluable factual claims",
+    "citation_correctness_rate": "citations that support the attached claim / citations assessed",
+    "citation_coverage_rate": "evaluable factual claims with a citation / evaluable factual claims"
+  },
+  "refusal_rules": {
+    "correct_refusal": "For an unanswerable item, clearly states that the supplied corpus is insufficient and adds no substantive guess.",
+    "false_answer": "For an unanswerable item, asserts substantive information that is unsupported by the frozen corpus."
+  },
+  "missing_output_rule": "An empty model response is incorrect. One rerun is allowed only for a confirmed infrastructure exception; a second failure remains missing."
+}

@@ -1,0 +1,16 @@
+{
+  "selection_timestamp_utc": "2026-08-30T08:49:57.382691+00:00",
+  "selection_split": "development only",
+  "ranking_rule": "Mean Recall@5, then MRR, then Hit Rate@5, then lower median query latency",
+  "best_chunk_comparison": "D0",
+  "best_overlap_comparison": "D0",
+  "best_reranking_comparison": "D5",
+  "best_candidate_pool_comparison": "P10",
+  "enhanced_config": {
+    "config_id": "D6",
+    "chunk_size": 512,
+    "overlap_pct": 10,
+    "rerank": true,
+    "candidate_pool": 10
+  }
+}
